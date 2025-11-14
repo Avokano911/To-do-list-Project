@@ -1,0 +1,58 @@
+CLASS TASK
+      CLASS FIELDS:
+            NameOFTasks (String)
+            Status (String)
+
+      CONSTRUCTOR WITH PARAMETER
+      IMPORT: pNameOFTasks (String), pStatus
+      EXPORT: none
+      ALGORITHM:
+            NameOFTask <- setNameOFTasks(pNameOFTasks)
+            Status <- setStatus(pStatus)
+      
+      COPY CONSTRUCTOR
+      IMPORT: pNameOFTasks
+      EXPORT: none
+      ASSERTION: Object created as a copy of the IMPORTED object.
+      ALGORITHM:
+             NameOFTask <- getNameOFTasks()
+             Status <- getStatus()
+
+      ACCESSOR: getNameOFTasks
+      IMPORT: none
+      EXPORT: NameOFTask
+      ALGORITHM:
+             RETURN NameOFTask
+
+      ACCESSOR: getStatus
+      IMPORT: Status
+      EXPOORT: none
+      ALGORITHM:
+              RETURN Status
+
+     MUTATOR: setNameOFTasks
+     IMPORT: pNameOFTasks
+     EXPORT: none
+     ASSERTION: State of NameOFTask updated to imported strings.
+     ALGORITHM: 
+          IF pNameOFTasks IS String THEN
+               NameOFTask <- pNameOFTasks
+          ELSE 
+             PRINT "The input need to be strings!"
+
+     MUTATOR: setStatus
+     IMPORT: pStatus
+     EXPORT: none
+     ASSERTION: State of Status updated to imported strings.
+     ALGORITHM:
+          IF pStatus IS "DONE" THEN
+               Status <- pStatus
+          ELSE IF pStatus IS "INPROGRESS" THEN
+               Status <- pStatus
+          ELSE IF pStatus IS "HAVEN'T STARTED YET" THEN
+               Status <- pStatus
+          ELSE
+               PRINT "The input is not the three conditions"
+
+        
+                
