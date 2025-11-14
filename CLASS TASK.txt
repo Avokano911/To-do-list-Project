@@ -2,6 +2,7 @@ CLASS TASK
       CLASS FIELDS:
             NameOFTasks (String)
             Status (String)
+            DATE // INHERITED FROM DATE CLASS
 
       CONSTRUCTOR WITH PARAMETER
       IMPORT: pNameOFTasks (String), pStatus

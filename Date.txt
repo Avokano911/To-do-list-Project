@@ -1,0 +1,79 @@
+CLASS DATE:
+      CLASS FIELDS:
+            Day (INT)
+            Month (INT)
+            Year (INT)
+
+      CONSTRUCTOR WITH PARAMETER
+      IMPORT: pDay (INT) , pMonth (INT), pYear (INT)
+      EXPORT: none
+      ALGORITHM:
+            Day <- setDay(pDay)
+            Month <- setMonth(pMonth)
+            Year <- setYear(pYear)
+
+      COPY CONSTRUCTOR
+      IMPORT: pDay, pMonth, pYear
+      EXPORT: none
+      ASSERTION: Object created as a copy of the Imported object
+      ALGORITHM:
+             Day <- getDay()
+             Year <- getYear()
+             Month <- getYear()
+
+      ACCESSOR: getDay
+      IMPORT: none
+      EXPOORT: Day
+      ALGORITHM:
+             RETURN Day
+      
+      ACCESSOR: getYear
+      IMPORT: none
+      EXPORT: Year
+      ALGORITHM:
+              RETURN Year
+
+      ACCESSOR: getMonth
+      IMPORT: none
+      EXPORT: Month
+      ALGORITHM: 
+              RETURN Month
+
+      MUTATOR: setDay
+      IMPORT: pDay
+      EXPORT: none
+      ALGORITHM:
+           IF pDay IS INT THEN
+              IF pDay > 0 AND pDay < 32:
+                 Day <- pDay
+              ELSE :
+                 PRINT " something wrong "
+           ELSE THEN
+               PRINT " The input must be integer ! "
+
+     MUTATOR: setMonth
+     IMPORT: pMonth
+     EXPORT: none
+     ALGORITHM: 
+           IF pMonth IS INT THEN
+              IF pMonth > 0 AND pMonth < 13:
+                 Month <- pMonth
+              ELSE :
+                 PRINT " Something wrong "
+           ELSE THEN
+                 PRINT " The input must be integer ! "
+
+     MUTATOR: setYear
+     IMPORT: pYear
+     EXPORT: none
+     ALGORITHM:
+           IF pYear IS INT THEN
+               IF pYear > 2000 AND pYear < 2025:
+                  Year <- pYear
+               ELSE THEN
+                  PRINT "Something wrong "
+           ELSE THEN
+                  PRINT " The input must be integer! "
+
+     
+                 

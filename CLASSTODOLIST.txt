@@ -1,0 +1,36 @@
+CLASS TODOLIST
+
+BEGIN TODOLIST
+
+   CLASS FIELDS:
+       TODOLISTRecords (Array of TODOLIST informations)
+
+    MAIN:
+      
+      INT CHOICE = 0:
+
+      DO 
+
+      PRINT < "HOME" >
+      PRINT < "TODAY " >
+
+      SWITCH (CHOICE):
+
+              CASE 0:
+                 
+                 // MOVE TO HOME
+                 PRINT < " lcome to our system ">
+                 PRINT < " Please choose options below " >
+                 PRINT < " 1. Create TO do list for today " >
+                 PRINT < " 2. Review what you have achieved so far " >
+
+              CASE 1:
+                 
+                 // MOVE TO TODAY
+                 PRINT < " Hi " + userName >
+                 
+
+                   
+         
+         
+
